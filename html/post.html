@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../styles/header.css">
+        <link rel="stylesheet" href="../styles/post.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <link href='https://fonts.googleapis.com/css?family=Marck+Script|Satisfy' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    </head>
+    <body>
+<div class="header">
+    <input type="button" value="Sign Up" id="signUp" class="headerBtns btns">
+    <input type="button" value="Sign In" id="signIn" class="headerBtns btns">
+    <a id="title" class="logo">ScriBBler</a>
+    <p class="catchphrase">Explore, Imagine, Create</p>
+</div>
+<div id="signInModal" class="modal">
+    <div class="modal-content">
+        <span id="signInClose"class="close">&times;</span>
+        <h1 class="a">Welcome Back!</h1>
+        <hr>
+        <form>
+            <!--Akshit-->
+            <div class="container">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" required>
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" required>
+                <button type="submit" class="signInBtn">Sign In</button>
+                <p class="x">Not a member? <span class="c" onclick="signUp()">Sign Up</span></p>
+            </div>
+        </form>
+    </div>
+</div>
+<!--Sign Up modal-->
+<div id="signUpModal" class="modal">
+    <div class="modal-content">
+        <span id="signUpClose"class="close">&times;</span>
+        <h1>Get Started</h1>
+        <hr>
+        <form>
+            <div class="container">
+                <label><b>Full Name</b></label>
+                <input type="text" placeholder="Enter Full Name" required>
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" required>
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" required>
+                <label><b>Confirm Password</b></label>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit" class="signUpBtn">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="postcontainer">
+    <p id="postheading">The legacy of Madara Uchiha</p>
+    <input type="text" id="editing">
+    <div class="nameEdit">
+        <p id="name">Madara Uchiha</p>
+        <button id="edit" onclick="editPost()">Edit <img src="https://img.icons8.com/metro/15/ffffff/edit-property.png"/></button>
+        <button id="save" onclick="savePost()">Save <img src="https://img.icons8.com/ios-filled/15/ffffff/save--v1.png"/></button>
+    </div>
+    <p id="post">Wake up to reality! Nothing ever goes as planned in this world. The longer you live, the more you realize that in 
+    this reality only pain, suffering and futility exist.When a man learns to love, he must bear the risk of hatred.Man seeks peace,
+    yet at the same time yearning for war… Those are the two realms belonging solely to man. Thinking of peace whilst spilling blood 
+    is something that only humans could do. They’re two sides of the same coin… to protect something… another must be sacrificed.The 
+    longer you live… The more you realize that reality is just made of pain, suffering and emptiness.Talking about peace whilst spilling 
+    blood, it’s something that only humans can do.Power is not will, it is the phenomenon of physically making things happen.Would you 
+    consider dying together “Teamwork” as well?Don’t improvise what you cannot handle.The concept of hope is nothing more than giving up. 
+    A word that holds no true meaning.It seems that you still want to dance but… You will not be able to make steps anymore.Oh, you know…it’s 
+    fun, it’s part of my plan…to start a war…to bring peace.In this world, wherever there is light – there are also shadows. As long as the 
+    concept of winners exists, there must also be losers. The selfish desire of wanting to maintain peace causes wars, and hatred is born to 
+    protect love.Nine-Tails, you are merely a momentary life, a temporary existence of coalesced energy, energy that once was a single, ultimate 
+    form. -Madara Uchiha</p>
+    <textarea id="postedit"></textarea>
+    <button id="like" onclick="likePost()"><img src="https://img.icons8.com/fluent-systems-filled/20/ffffff/facebook-like.png"/>Like</button>
+    <p id="likes">Be first one to like this!</p>
+    <textarea id="comments" placeholder="Leave a comment..."></textarea><br>
+    <button id="commentButton" onclick="postComment()">Comment</button>
+    <h3 id="commentHeading">All Comments</h3>
+    <div id="allComment">
+    </div>
+</div>
+<script src="../scripts/post.js"></script>
+<script src="../scripts/header.js"></script>
+    </body>
+</html>
